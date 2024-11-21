@@ -3,7 +3,7 @@ server:
   ssl:
     enabled: true  # SSL 활성화
     key-store: classpath:/static/config1/keystore.p12  # 키스토어 파일 경로
-    key-store-password: 870843  # 키스토어 비밀번호
+    key-store-password: 050924  # 키스토어 비밀번호
     key-store-type: PKCS12  # 키스토어 타입
     key-alias: mylocalcert  # 키 알리아스
 
