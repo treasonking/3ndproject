@@ -1,0 +1,17 @@
+cmd실행 
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+choco install openssl   (관리자cmd)
+
+.\mkcert -install
+
+.\mkcert localhost (mkcert 경로에 localhost.pem, localhost-key.pem 생성됨)
+
+
+
+openssl pkcs12 -export -in localhost.pem -inkey localhost-key.pem -out keystore.p12 -name mylocalcert
+
+sysdm.cpl 환경변수 SSL_KEY_STORE_PASSWORD 추가 값 password123 입력
+
+
+
