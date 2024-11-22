@@ -270,7 +270,7 @@ public class DashBoardController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-// ----------------------------------------  가입자 끝 ---------------------------
+// --------------------------  가입자 끝 ---------------------------
         // 예약 건수 관련 변수 초기화
         int todayReservationCount = 0;
         int yesterdayReservationCount = 0;
