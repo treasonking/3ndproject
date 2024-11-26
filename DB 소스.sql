@@ -624,3 +624,8 @@ CREATE TABLE RESERVATION(
     FOREIGN KEY(DEFAULT_NUM)
     REFERENCES HOTEL_LIST(DEFAULT_NUM)
 );
+CREATE SEQUENCE review_seq
+START WITH 1        -- 시작 값
+INCREMENT BY 1      -- 증가 값
+NOCACHE             -- 캐싱하지 않음 (캐싱을 원하면 CACHE <숫자>)
+NOCYCLE;            -- 최대값에 도달하면 순환하지 않음
